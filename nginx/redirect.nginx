@@ -1,0 +1,10 @@
+
+map $http_user_agent $outdated {
+    default      0;
+    "~MSIE\."    1;
+    "~Trident\." 1;
+}
+
+if ($outdated = 1){
+    rewrite ^ /stop-ie.html redirect;
+}
