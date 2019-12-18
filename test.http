@@ -1,0 +1,27 @@
+GET http://localhost:80
+Accept: */*
+Cache-Control: no-cache
+User-Agent:  Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+
+###
+
+GET http://localhost:80
+Accept: */*
+Cache-Control: no-cache
+User-Agent:  not ie
+
+###
+
+GET http://localhost:8080
+Accept: */*
+Cache-Control: no-cache
+User-Agent:  Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+
+###
+
+GET http://localhost:8080
+Accept: */*
+Cache-Control: no-cache
+User-Agent:  not ie
+
+###

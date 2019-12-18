@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  apache:
+    build: ./apache
+    volumes:
+    - ./public:/usr/local/apache2/htdocs/
+    ports:
+      - "80:80"
+  nginx:
+    image: nginx
+    volumes:
+      - "./nginx/nginx.nginx:/etc/nginx/nginx.conf"
+      - "./nginx/redirect.nginx:/etc/nginx/conf.d/redirect.conf"
+      - "./public:/usr/share/nginx/html"
+    ports:
+      - "8080:8080"

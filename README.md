@@ -17,5 +17,15 @@ This repo holds some examples how to discontinue the IE11 support.
 
 ## Examples of redirects
 
-* [Apache](./apache/redirect.conf) 
-* [Nginx](./nginx/redirect.conf)
+* Apache [conf](./apache/redirect.conf) or [.htaccess](./public/.htaccess) 
+* [Nginx](./nginx/redirect.nginx)
+
+
+## local test env with docker
+
+```shell script
+docker-compose build 
+docker-compose up -d 
+```
+* apache runs on port 80  -> http://localhost:80
+* nginx runs on port 8080 -> http://localhost:8080
